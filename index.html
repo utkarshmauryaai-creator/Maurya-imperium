@@ -1,0 +1,88 @@
+from fastapi import FastAPI, Request, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+import httpx 
+import logging 
+
+app = FastAPI()
+
+# --- 🛠️ कॉन्फ़िगरेशन ---
+TOKEN = "8431876910:AAFW50pi2rNc66WkQtqGuj0Gc0KRlfIB9gU"
+CHAT_ID = "7742066751"
+
+# --- 🔒 सुरक्षा: सिर्फ आपका डोमेन (बिना आखिरी '/') ---
+ALLOWED_DOMAINS = [
+    "https://019bb09b-e92f-7a55-a05a-684f63a13f4b.arena.site",
+    "http://127.0.0.1:5500" # लोकल टेस्टिंग के लिए
+]
+
+# --- 🛡️ CORS सेटिंग ---
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=ALLOWED_DOMAINS, # सिर्फ आपकी वेबसाइट को अनुमति है
+    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_headers=["*"],
+)
+
+# जादुई रास्ता: यह / और /submit दोनों को संभाल लेगा
+@app.api_route("/", methods=["GET", "POST"])
+@app.api_route("/submit", methods=["GET", "POST"])
+async def handle_any_form(request: Request):
+    # अगर कोई सिर्फ लिंक खोलकर देखे
+    if request.method == "GET":
+        return {"status": "running", "message": "Domain Security Active"}
+
+    try:
+        # 1. डोमेन सुरक्षा जाँच (Origin Check)
+        origin = request.headers.get("origin")
+        if origin not in ALLOWED_DOMAINS:
+            logging.warning(f"Blocked request from unknown domain: {origin}")
+            return {"status": "error", "message": "Domain Not Allowed"}
+
+        # 2. डेटा उठाना (Form या JSON)
+        form_data = await request.form()
+        data_to_send = dict(form_data) if form_data else {}
+        
+        if not data_to_send:
+            try:
+                data_to_send = await request.json()
+            except:
+                pass
+
+        if not data_to_send:
+            return {"status": "error", "message": "No data received"}
+
+        # 3. टेलीग्राम मैसेज डिजाइन
+        message_content = "🚀 **नया फॉर्म सबमिशन!**\n"
+        message_content += f"🌐 **वेबसाइट:** {origin}\n"
+        message_content += "━━━━━━━━━━━━━━━━━━━━\n"
+
+        for key, value in data_to_send.items():
+            clean_key = key.replace("_", " ").title()
+            message_content += f"🔹 **{clean_key}:** `{value}`\n"
+
+        message_content += "━━━━━━━━━━━━━━━━━━━━\n"
+        message_content += "⏰ **समय:** Auto Logged"
+
+        # 4. टेलीग्राम पर भेजना
+        telegram_url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
+        async with httpx.AsyncClient() as client:
+            response = await client.post(telegram_url, data={
+                "chat_id": CHAT_ID,
+                "text": message_content,
+                "parse_mode": "Markdown"
+            }, timeout=10.0)
+            
+            if response.status_code == 200:
+                return {"status": "success", "message": "Telegram par bhej diya gaya!"}
+            else:
+                return {"status": "error", "message": "Telegram API error"}
+
+    except Exception as e:
+        logging.error(f"Error: {str(e)}")
+        return {"status": "error", "message": "Internal Server Error"}
+
+# Render हेल्थ चेक
+@app.get("/health")
+async def health_check():
+    return {"status": "running"}
+
