@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>मौर्य साम्राज्य | Maurya Imperium</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --dark-blue: #1a237e;
+            --royal-blue: #283593;
+            --cream: #FDF5E6;
+            --brown: #5D4037;
+        }
+        
+        * {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+        }
+        
+        .font-cinzel {
+            font-family: 'Cinzel', serif;
+        }
+        
+        .gradient-gold {
+            background: linear-gradient(135deg, #D4AF37 0%, #F4E5B5 50%, #D4AF37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .bg-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #1a237e 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(212, 175, 55, 0.25);
+        }
+        
+        .ashoka-chakra {
+            animation: spin 30s linear infinite;
+        }
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #D4AF37;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -28px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: #D4AF37;
+            border-radius: 50%;
+            border: 4px solid #1a237e;
+        }
+        
+        .pillar-decoration {
+            background: linear-gradient(to bottom, #D4AF37, #B8860B);
+            width: 4px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="scroll-smooth bg-pattern" style="background-color: #FDF5E6;">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" style="background: linear-gradient(135deg, #1a237e 0%, #283593 100%);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #D4AF37, #F4E5B5);">
+                        <svg viewBox="0 0 100 100" class="w-8 h-8 md:w-10 md:h-10">
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#1a237e" stroke-width="3"/>
+                            <circle cx="50" cy="50" r="12" fill="#1a237e"/>
+                            <g stroke="#1a237e" stroke-width="2">
+                                <line x1="50" y1="5" x2="50" y2="20"/>
+                                <line x1="50" y1="80" x2="50" y2="95"/>
+                                <line x1="5" y1="50" x2="20" y2="50"/>
+                                <line x1="80" y1="50" x2="95" y2="50"/>
+                                <line x1="18" y1="18" x2="28" y2="28"/>
+                                <line x1="72" y1="72" x2="82" y2="82"/>
+                                <line x1="82" y1="18" x2="72" y2="28"/>
+                                <line x1="28" y1="72" x2="18" y2="82"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-lg md:text-xl font-bold text-white">मौर्य साम्राज्य</h1>
+                        <p class="text-xs font-cinzel" style="color: #D4AF37;">MAURYA IMPERIUM</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-white hover:text-yellow-400 transition">मुखपृष्ठ</a>
+                    <a href="#history" class="nav-link text-white hover:text-yellow-400 transition">इतिहास</a>
+                    <a href="#culture" class="nav-link text-white hover:text-yellow-400 transition">कला-संस्कृति</a>
+                    <a href="#community" class="nav-link text-white hover:text-yellow-400 transition">समुदाय</a>
+                    <a href="#contact" class="px-4 py-2 rounded-full font-semibold transition hover:scale-105" style="background: linear-gradient(135deg, #D4AF37, #F4E5B5); color: #1a237e;">संपर्क करें</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-white text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden pb-4 px-4" style="background: linear-gradient(135deg, #1a237e, #283593);">
+            <a href="#home" class="block py-2 text-white hover:text-yellow-400">मुखपृष्ठ</a>
+            <a href="#history" class="block py-2 text-white hover:text-yellow-400">इतिहास</a>
+            <a href="#culture" class="block py-2 text-white hover:text-yellow-400">कला-संस्कृति</a>
+            <a href="#community" class="block py-2 text-white hover:text-yellow-400">समुदाय</a>
+            <a href="#contact" class="block py-2 text-white hover:text-yellow-400">संपर्क करें</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen relative overflow-hidden hero-bg pt-20">
+        <!-- Decorative Elements -->
+        <div class="absolute inset-0 opacity-10">
+            <svg class="absolute top-20 left-10 w-32 h-32 ashoka-chakra" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                <circle cx="50" cy="50" r="10" fill="#D4AF37"/>
+                <g stroke="#D4AF37" stroke-width="1.5">
+                    <line x1="50" y1="5" x2="50" y2="25"/><line x1="50" y1="75" x2="50" y2="95"/>
+                    <line x1="5" y1="50" x2="25" y2="50"/><line x1="75" y1="50" x2="95" y2="50"/>
+                    <line x1="15" y1="15" x2="30" y2="30"/><line x1="70" y1="70" x2="85" y2="85"/>
+                    <line x1="85" y1="15" x2="70" y2="30"/><line x1="30" y1="70" x2="15" y2="85"/>
+                </g>
+            </svg>
+            <svg class="absolute bottom-20 right-10 w-48 h-48 ashoka-chakra" style="animation-direction: reverse;" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                <circle cx="50" cy="50" r="10" fill="#D4AF37"/>
+            </svg>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+            <div class="grid md:grid-cols-2 gap-8 items-center min-h-[80vh]">
+                <!-- Text Content -->
+                <div class="text-center md:text-left order-2 md:order-1">
+                    <div class="inline-block px-4 py-1 rounded-full text-sm mb-4" style="background: rgba(212, 175, 55, 0.2); color: #D4AF37;">
+                        <i class="fas fa-crown mr-2"></i>भारत का गौरवशाली इतिहास
+                    </div>
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-4">
+                        <span class="gradient-gold">मौर्य साम्राज्य</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl font-cinzel mb-6" style="color: #D4AF37;">MAURYA IMPERIUM</p>
+                    <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
+                        भारतीय उपमहाद्वीप का सबसे विशाल और शक्तिशाली साम्राज्य। चंद्रगुप्त मौर्य से लेकर अशोक महान तक, 
+                        एक ऐसी विरासत जिसने विश्व इतिहास को नई दिशा दी।
+                    </p>
+                    
+                    <!-- Quote Box -->
+                    <div class="p-6 rounded-xl mb-8 border-l-4" style="background: rgba(212, 175, 55, 0.1); border-color: #D4AF37;">
+                        <p class="text-xl md:text-2xl font-semibold" style="color: #D4AF37;">
+                            "अपनी जड़ों को जानें, अपने भविष्य को गढ़ें।"
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#history" class="px-8 py-3 rounded-full font-semibold text-lg transition hover:scale-105 shadow-lg" style="background: linear-gradient(135deg, #D4AF37, #F4E5B5); color: #1a237e;">
+                            <i class="fas fa-book-open mr-2"></i>इतिहास जानें
+                        </a>
+                        <a href="#community" class="px-8 py-3 rounded-full font-semibold text-lg transition hover:scale-105 border-2" style="border-color: #D4AF37; color: #D4AF37;">
+                            <i class="fas fa-users mr-2"></i>समुदाय से जुड़ें
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hero Image - AI Generated Style -->
+                <div class="order-1 md:order-2 relative">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl" style="background: linear-gradient(135deg, #5D4037 0%, #3E2723 100%);">
+                        <!-- Mauryan City Illustration -->
+                        <svg viewBox="0 0 600 500" class="w-full h-auto">
+                            <!-- Sky -->
+                            <defs>
+                                <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#1a237e"/>
+                                    <stop offset="50%" style="stop-color:#283593"/>
+                                    <stop offset="100%" style="stop-color:#5D4037"/>
+                                </linearGradient>
+                                <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#F4E5B5"/>
+                                    <stop offset="100%" style="stop-color:#D4AF37"/>
+                                </linearGradient>
+                                <linearGradient id="pillarGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#B8860B"/>
+                                    <stop offset="50%" style="stop-color:#D4AF37"/>
+                                    <stop offset="100%" style="stop-color:#B8860B"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="600" height="500" fill="url(#skyGrad)"/>
+                            
+                            <!-- Stars -->
+                            <g fill="#FFF" opacity="0.6">
+                                <circle cx="50" cy="40" r="1.5"/><circle cx="150" cy="60" r="1"/>
+                                <circle cx="250" cy="30" r="1.5"/><circle cx="350" cy="50" r="1"/>
+                                <circle cx="450" cy="35" r="1.5"/><circle cx="550" cy="55" r="1"/>
+                                <circle cx="100" cy="80" r="1"/><circle cx="500" cy="70" r="1"/>
+                            </g>
+                            
+                            <!-- Moon -->
+                            <circle cx="500" cy="80" r="30" fill="#FDF5E6" opacity="0.9"/>
+                            
+                            <!-- Distant Mountains -->
+                            <path d="M0 350 L100 280 L200 320 L300 260 L400 300 L500 250 L600 290 L600 500 L0 500 Z" fill="#3E2723" opacity="0.5"/>
+                            
+                            <!-- Main Palace Structure -->
+                            <rect x="200" y="200" width="200" height="200" fill="#5D4037"/>
+                            <rect x="220" y="180" width="160" height="20" fill="url(#goldGrad)"/>
+                            
+                            <!-- Palace Dome -->
+                            <ellipse cx="300" cy="180" rx="60" ry="40" fill="#8D6E63"/>
+                            <ellipse cx="300" cy="180" rx="50" ry="30" fill="#A1887F"/>
+                            <circle cx="300" cy="145" r="8" fill="url(#goldGrad)"/>
+                            
+                            <!-- Palace Windows -->
+                            <rect x="240" y="230" width="30" height="50" rx="15" fill="#1a237e"/>
+                            <rect x="285" y="230" width="30" height="50" rx="15" fill="#1a237e"/>
+                            <rect x="330" y="230" width="30" height="50" rx="15" fill="#1a237e"/>
+                            
+                            <!-- Palace Door -->
+                            <rect x="270" y="320" width="60" height="80" rx="30" fill="#3E2723"/>
+                            <rect x="275" y="325" width="50" height="75" rx="25" fill="#1a237e"/>
+                            
+                            <!-- Ashoka Pillar -->
+                            <rect x="480" y="250" width="25" height="150" fill="url(#pillarGrad)"/>
+                            <rect x="475" y="240" width="35" height="15" fill="url(#goldGrad)"/>
+                            
+                            <!-- Lion Capital -->
+                            <ellipse cx="492" cy="230" rx="20" ry="15" fill="url(#goldGrad)"/>
+                            <ellipse cx="492" cy="220" rx="15" ry="12" fill="#D4AF37"/>
+                            <circle cx="492" cy="208" r="10" fill="#B8860B"/>
+                            
+                            <!-- Side Towers -->
+                            <rect x="120" y="280" width="60" height="120" fill="#5D4037"/>
+                            <polygon points="120,280 150,240 180,280" fill="#8D6E63"/>
+                            <rect x="420" y="300" width="50" height="100" fill="#5D4037"/>
+                            <polygon points="420,300 445,260 470,300" fill="#8D6E63"/>
+                            
+                            <!-- Ground/Platform -->
+                            <rect x="100" y="400" width="400" height="30" fill="#8D6E63"/>
+                            <rect x="80" y="430" width="440" height="20" fill="#5D4037"/>
+                            
+                            <!-- Steps -->
+                            <rect x="250" y="400" width="100" height="10" fill="#A1887F"/>
+                            <rect x="240" y="410" width="120" height="10" fill="#8D6E63"/>
+                            <rect x="230" y="420" width="140" height="10" fill="#6D4C41"/>
+                            
+                            <!-- Trees -->
+                            <ellipse cx="60" cy="380" rx="35" ry="50" fill="#2E7D32" opacity="0.8"/>
+                            <rect x="55" y="380" width="10" height="50" fill="#5D4037"/>
+                            <ellipse cx="540" cy="370" rx="40" ry="55" fill="#2E7D32" opacity="0.8"/>
+                            <rect x="535" y="380" width="10" height="50" fill="#5D4037"/>
+                            
+                            <!-- Decorative Border -->
+                            <rect x="10" y="10" width="580" height="480" fill="none" stroke="url(#goldGrad)" stroke-width="3" rx="10"/>
+                        </svg>
+                        
+                        <div class="absolute bottom-0 left-0 right-0 p-4 text-center" style="background: linear-gradient(transparent, rgba(26, 35, 126, 0.9));">
+                            <p class="text-sm" style="color: #D4AF37;">मौर्यकालीन राजधानी पाटलिपुत्र का कलात्मक चित्रण</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-4 -right-4 w-24 h-24 rounded-full flex items-center justify-center shadow-xl" style="background: linear-gradient(135deg, #D4AF37, #F4E5B5);">
+                        <div class="text-center" style="color: #1a237e;">
+                            <p class="text-2xl font-bold">322</p>
+                            <p class="text-xs">ई.पू.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#history" class="text-3xl" style="color: #D4AF37;">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section id="history" class="py-16 md:py-24" style="background-color: #FDF5E6;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-4 mb-4">
+                    <div class="pillar-decoration h-16"></div>
+                    <h2 class="text-3xl md:text-5xl font-bold" style="color: #1a237e;">मौर्य साम्राज्य का इतिहास</h2>
+                    <div class="pillar-decoration h-16"></div>
+                </div>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto" style="color: #5D4037;">
+                    322 ई.पू. से 185 ई.पू. तक फैला भारत का सबसे विशाल और शक्तिशाली साम्राज्य
+                </p>
+            </div>
+
+            <!-- Emperor Cards -->
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- Chandragupta Maurya -->
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-xl border" style="border-color: #D4AF37;">
+                    <div class="h-48 relative" style="background: linear-gradient(135deg, #1a237e, #283593);">
+                        <svg viewBox="0 0 200 150" class="w-full h-full">
+                            <!-- Warrior King Illustration -->
+                            <defs>
+                                <linearGradient id="crownGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#F4E5B5"/>
+                                    <stop offset="100%" style="stop-color:#D4AF37"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- Background circles -->
+                            <circle cx="100" cy="75" r="60" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.3"/>
+                            <circle cx="100" cy="75" r="50" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.4"/>
+                            
+                            <!-- Crown -->
+                            <polygon points="70,40 100,20 130,40 125,50 100,35 75,50" fill="url(#crownGrad)"/>
+                            
+                            <!-- Face Circle -->
+                            <circle cx="100" cy="70" r="30" fill="#D7CCC8"/>
+                            
+                            <!-- Armor -->
+                            <path d="M60 100 Q100 80 140 100 L140 140 L60 140 Z" fill="#D4AF37"/>
+                            <path d="M70 105 Q100 90 130 105 L130 140 L70 140 Z" fill="#B8860B"/>
+                            
+                            <!-- Sword -->
+                            <rect x="145" y="60" width="6" height="60" fill="#9E9E9E"/>
+                            <rect x="140" y="55" width="16" height="8" fill="url(#crownGrad)"/>
+                        </svg>
+                        <div class="absolute bottom-2 left-2 right-2 text-center">
+                            <span class="px-3 py-1 rounded-full text-xs" style="background: rgba(212, 175, 55, 0.9); color: #1a237e;">संस्थापक</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2" style="color: #1a237e;">चंद्रगुप्त मौर्य</h3>
+                        <p class="text-sm mb-3" style="color: #D4AF37;">शासनकाल: 322-298 ई.पू.</p>
+                        <p class="text-gray-600 mb-4">
+                            नन्द वंश को पराजित कर मौर्य साम्राज्य की स्थापना की। चाणक्य के मार्गदर्शन में भारत को एकीकृत किया और सेल्यूकस को पराजित किया।
+                        </p>
+                        <ul class="text-sm space-y-2" style="color: #5D4037;">
+                            <li><i class="fas fa-check-circle mr-2" style="color: #D4AF37;"></i>नन्द साम्राज्य का अंत</li>
+                            <li><i class="fas fa-check-circle mr-2" style="color: #D4AF37;"></i>यूनानी आक्रमण का प्रतिरोध</li>
+                            <li><i class="fas fa-check-circle mr-2" style="color: #D4AF37;"></i>अखंड भारत की नींव</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Chanakya -->
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-xl border" style="border-color: #D4AF37;">
+                    <div class="h-48 relative" style="background: linear-gradient(135deg, #5D4037, #3E2723);">
+                        <svg viewBox="0 0 200 150" class="w-full h-full">
+                            <!-- Scholar Illustration -->
+                            <!-- Background -->
+                            <circle cx="100" cy="75" r="55" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.3"/>
+                            
+                            <!-- Scroll -->
+                            <rect x="30" y="100" width="60" height="40" rx="5" fill="#FDF5E6"/>
+                            <line x1="40" y1="110" x2="80" y2="110" stroke="#5D4037" stroke-width="2"/>
+                            <line x1="40" y1="120" x2="75" y2="120" stroke="#5D4037" stroke-width="2"/>
+                            <line x1="40" y1="130" x2="70" y2="130" stroke="#5D4037" stroke-width="2"/>
+                            
+                            <!-- Face -->
+                            <circle cx="100" cy="65" r="28" fill="#D7CCC8"/>
+                            
+                            <!-- Shikha (Hair tuft) -->
+                            <ellipse cx="100" cy="35" rx="8" ry="12" fill="#3E2723"/>
+                            
+                            <!-- Robes -->
+                            <path d="M60 95 Q100 80 140 95 L145 150 L55 150 Z" fill="#FF6F00"/>
+                            <path d="M65 100 Q100 88 135 100 L138 150 L62 150 Z" fill="#E65100"/>
+                            
+                            <!-- Book -->
+                            <rect x="120" y="95" width="45" height="35" fill="#8D6E63"/>
+                            <rect x="122" y="97" width="41" height="31" fill="#FDF5E6"/>
+                            <text x="143" y="118" text-anchor="middle" font-size="8" fill="#1a237e">अर्थ</text>
+                            <text x="143" y="126" text-anchor="middle" font-size="8" fill="#1a237e">शास्त्र</text>
+                        </svg>
+                        <div class="absolute bottom-2 left-2 right-2 text-center">
+                            <span class="px-3 py-1 rounded-full text-xs" style="background: rgba(212, 175, 55, 0.9); color: #1a237e;">राजनीतिज्ञ</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2" style="color: #1a237e;">आचार्य चाणक्य</h3>
+                        <p class="text-sm mb-3" style="color: #D4AF37;">कौटिल्य / विष्णुगुप्त</p>
+                        <p class="text-gray-600 mb-4">
+                            महान राजनीतिज्ञ, अर्थशास्त्री और रणनीतिकार। 'अर्थशास्त्र' के रचयिता और चंद्रगुप्त के गुरु एवं मार्गदर्शक।
+                        </p>
+                        <ul class="text-sm space-y-2" style="color: #5D4037;">
+                            <li><i class="fas fa-check-circle mr-2" style="color: #D4AF37;"></i>अर्थशास्त्र ग्रंथ</li>
+                            <li><i class="fas fa-check-circle mr-2" style="color: #D4AF37;"></i>राजनीतिक कूटनीति</li>
+                            <li><i class="fas fa-check-circle mr-2" style="color: #D4AF37;"></i>तक्षशिला विश्वविद्यालय</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ashoka -->
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-xl border" style="border-color: #D4AF37;">
+                    <div class="h-48 relative" style="background: linear-gradient(135deg, #283593, #1a237e);">
+                        <svg viewBox="0 0 200 150" class="w-full h-full">
+                            <!-- Peaceful King with Dhamma Chakra -->
+                            <!-- Dharma Chakra Background -->
+                            <circle cx="100" cy="75" r="55" fill="none" stroke="#D4AF37" stroke-width="2" opacity="0.4"/>
+                            <g stroke="#D4AF37" stroke-width="1" opacity="0.4">
+                                <line x1="100" y1="20" x2="100" y2="130"/>
+                                <line x1="45" y1="75" x2="155" y2="75"/>
+                                <line x1="55" y1="35" x2="145" y2="115"/>
+                                <line x1="145" y1="35" x2="55" y2="115"/>
+                            </g>
+                            
+                            <!-- Crown/Diadem -->
+                            <ellipse cx="100" cy="35" rx="25" ry="8" fill="#D4AF37"/>
+                            <circle cx="100" cy="30" r="5" fill="#FDF5E6"/>
+                            
+                            <!-- Face -->
+                            <circle cx="100" cy="60" r="25" fill="#D7CCC8"/>
+                            
+                            <!-- Peaceful Expression -->
+                            <circle cx="92" cy="57" r="2" fill="#3E2723"/>
+                            <circle cx="108" cy="57" r="2" fill="#3E2723"/>
+                            <path d="M92 68 Q100 73 108 68" fill="none" stroke="#5D4037" stroke-width="2"/>
+                            
+                            <!-- Buddhist Robes -->
+                            <path d="M55 90 Q100 75 145 90 L150 150 L50 150 Z" fill="#FF8F00"/>
+                            <path d="M60 95 Q100 82 140 95 L145 150 L55 150 Z" fill="#F57C00"/>
+                            
+                            <!-- Lotus -->
+                            <ellipse cx="100" cy="130" rx="20" ry="8" fill="#EC407A" opacity="0.8"/>
+                            <ellipse cx="100" cy="128" rx="15" ry="6" fill="#F48FB1"/>
+                        </svg>
+                        <div class="absolute bottom-2 left-2 right-2 text-center">
+                            <span class="px-3 py-1 rounded-full text-xs" style="background: rgba(212, 175, 55, 0.9); color: #1a237e;">महान</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2" style="color: #1a237e;">सम्राट अशोक महान</h3>
+                        <p class="text-sm mb-3" style="color: #D4AF37;">शासनकाल: 268-232 ई.पू.</p>
+                        <p class="text-gray-600 mb-4">
+                            कलिंग युद्ध के बाद बौद्ध धर्म अपनाया। 'धर्म-विजय' की अवधारणा लाए और अशोक स्तंभों द्वारा धर्म का प्रचार किया।
+                        </p>
+                        <ul class="text-sm space-y-2" style="color: #5D4037;">
+                            <li><i class="fas fa-check-circle mr-2" style="color: #D4AF37;"></i>धम्म की अवधारणा</li>
+                            <li><i class="fas fa-check-circle mr-2" style="color: #D4AF37;"></i>शिलालेख और स्तंभ</li>
+                            <li><i class="fas fa-check-circle mr-2" style="color: #D4AF37;"></i>बौद्ध धर्म का प्रसार</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ashoka Image Section -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden mb-16" style="border: 2px solid #D4AF37;">
+                <div class="grid md:grid-cols-2">
+                    <div class="p-8 md:p-12 flex flex-col justify-center">
+                        <h3 class="text-2xl md:text-3xl font-bold mb-4" style="color: #1a237e;">अशोक महान - शांति का प्रतीक</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            कलिंग युद्ध (261 ई.पू.) में हुए भीषण नरसंहार ने सम्राट अशोक के हृदय को परिवर्तित कर दिया। 
+                            उन्होंने हिंसा का मार्ग त्यागकर 'धम्म' (धर्म) का मार्ग अपनाया। उनके शिलालेख और स्तंभ 
+                            आज भी अहिंसा, सत्य और करुणा का संदेश देते हैं।
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="p-4 rounded-lg text-center" style="background-color: rgba(26, 35, 126, 0.1);">
+                                <p class="text-3xl font-bold" style="color: #1a237e;">14</p>
+                                <p class="text-sm" style="color: #5D4037;">प्रमुख शिलालेख</p>
+                            </div>
+                            <div class="p-4 rounded-lg text-center" style="background-color: rgba(212, 175, 55, 0.1);">
+                                <p class="text-3xl font-bold" style="color: #D4AF37;">7</p>
+                                <p class="text-sm" style="color: #5D4037;">स्तंभ शिलालेख</p>
+                            </div>
+                        </div>
+                        <a href="#culture" class="inline-flex items-center font-semibold" style="color: #D4AF37;">
+                            कला-संस्कृति देखें <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    <div class="relative" style="background: linear-gradient(135deg, #1a237e, #283593);">
+                        <!-- AI Generated Style - Ashoka with Buddhist monks -->
+                        <svg viewBox="0 0 400 350" class="w-full h-full">
+                            <!-- Background Temple -->
+                            <rect x="150" y="50" width="100" height="120" fill="#5D4037" opacity="0.5"/>
+                            <polygon points="150,50 200,10 250,50" fill="#8D6E63" opacity="0.5"/>
+                            
+                            <!-- Ashoka Pillar -->
+                            <rect x="320" y="80" width="30" height="200" fill="url(#pillarGrad)"/>
+                            <rect x="310" y="70" width="50" height="15" fill="#D4AF37"/>
+                            <ellipse cx="335" cy="60" rx="25" ry="15" fill="#D4AF37"/>
+                            <!-- Lion Capital simplified -->
+                            <ellipse cx="335" cy="45" rx="18" ry="12" fill="#B8860B"/>
+                            <circle cx="335" cy="35" r="8" fill="#D4AF37"/>
+                            
+                            <!-- Ashoka Figure (Center) -->
+                            <circle cx="200" cy="120" r="35" fill="#D7CCC8"/>
+                            <ellipse cx="200" cy="85" rx="30" ry="10" fill="#D4AF37"/>
+                            <path d="M140 160 Q200 140 260 160 L270 350 L130 350 Z" fill="#FF8F00"/>
+                            <path d="M150 170 Q200 152 250 170 L258 350 L142 350 Z" fill="#E65100"/>
+                            
+                            <!-- Buddhist Monks (Left) -->
+                            <circle cx="80" cy="150" r="25" fill="#D7CCC8"/>
+                            <path d="M40 180 Q80 165 120 180 L125 350 L35 350 Z" fill="#FF6F00"/>
+                            
+                            <!-- Buddhist Monks (Right) -->
+                            <circle cx="300" cy="160" r="22" fill="#D7CCC8"/>
+                            <path d="M265 190 Q300 175 335 190 L340 350 L260 350 Z" fill="#FF6F00"/>
+                            
+                            <!-- Lotus Flowers -->
+                            <ellipse cx="100" cy="330" rx="25" ry="10" fill="#EC407A" opacity="0.7"/>
+                            <ellipse cx="200" cy="340" rx="30" ry="12" fill="#F48FB1" opacity="0.8"/>
+                            <ellipse cx="300" cy="335" rx="25" ry="10" fill="#EC407A" opacity="0.7"/>
+                            
+                            <!-- Dharma Wheel -->
+                            <circle cx="200" cy="250" r="40" fill="none" stroke="#D4AF37" stroke-width="3"/>
+                            <circle cx="200" cy="250" r="10" fill="#D4AF37"/>
+                            <g stroke="#D4AF37" stroke-width="2">
+                                <line x1="200" y1="210" x2="200" y2="290"/>
+                                <line x1="160" y1="250" x2="240" y2="250"/>
+                                <line x1="172" y1="222" x2="228" y2="278"/>
+                                <line x1="228" y1="222" x2="172" y2="278"/>
+                            </g>
+                            
+                            <!-- Border -->
+                            <rect x="5" y="5" width="390" height="340" fill="none" stroke="#D4AF37" stroke-width="2" rx="5"/>
+                        </svg>
+                        <div class="absolute bottom-4 left-4 right-4 text-center p-2 rounded" style="background: rgba(0,0,0,0.5);">
+                            <p class="text-sm" style="color: #D4AF37;">सम्राट अशोक बौद्ध भिक्षुओं के साथ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="bg-white rounded-2xl p-8 md:p-12 shadow-xl" style="border: 2px solid #D4AF37;">
+                <h3 class="text-2xl md:text-3xl font-bold text-center mb-12" style="color: #1a237e;">
+                    <i class="fas fa-history mr-3" style="color: #D4AF37;"></i>मौर्य साम्राज्य की समयरेखा
+                </h3>
+                <div class="relative pl-8 border-l-4" style="border-color: #D4AF37;">
+                    <div class="timeline-item relative mb-8 pl-6">
+                        <h4 class="text-xl font-bold" style="color: #1a237e;">322 ई.पू. - साम्राज्य की स्थापना</h4>
+                        <p class="text-gray-600">चंद्रगुप्त मौर्य ने नन्द वंश को पराजित कर मौर्य साम्राज्य की नींव रखी।</p>
+                    </div>
+                    <div class="timeline-item relative mb-8 pl-6">
+                        <h4 class="text-xl font-bold" style="color: #1a237e;">305 ई.पू. - सेल्यूकस की पराजय</h4>
+                        <p class="text-gray-600">यूनानी शासक सेल्यूकस निकेटर को पराजित किया और संधि की।</p>
+                    </div>
+                    <div class="timeline-item relative mb-8 pl-6">
+                        <h4 class="text-xl font-bold" style="color: #1a237e;">268 ई.पू. - अशोक का राज्याभिषेक</h4>
+                        <p class="text-gray-600">बिंदुसार के बाद अशोक सम्राट बने।</p>
+                    </div>
+                    <div class="timeline-item relative mb-8 pl-6">
+                        <h4 class="text-xl font-bold" style="color: #1a237e;">261 ई.पू. - कलिंग युद्ध</h4>
+                        <p class="text-gray-600">भीषण युद्ध के बाद अशोक ने हिंसा त्यागी और बौद्ध धर्म अपनाया।</p>
+                    </div>
+                    <div class="timeline-item relative mb-8 pl-6">
+                        <h4 class="text-xl font-bold" style="color: #1a237e;">232 ई.पू. - अशोक का निधन</h4>
+                        <p class="text-gray-600">महान सम्राट अशोक का निधन, साम्राज्य कमजोर होने लगा।</p>
+                    </div>
+                    <div class="timeline-item relative pl-6">
+                        <h4 class="text-xl font-bold" style="color: #1a237e;">185 ई.पू. - साम्राज्य का अंत</h4>
+                        <p class="text-gray-600">पुष्यमित्र शुंग द्वारा अंतिम मौर्य सम्राट बृहद्रथ की हत्या।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Art & Culture Section -->
+    <section id="culture" class="py-16 md:py-24" style="background: linear-gradient(135deg, #1a237e, #283593);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">कला और संस्कृति</h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto" style="color: #D4AF37;">
+                    मौर्यकाल भारतीय कला और वास्तुकला का स्वर्णयुग था
+                </p>
+            </div>
+
+            <!-- Featured Art Image -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-2xl mb-16">
+                <div class="relative" style="background: linear-gradient(135deg, #5D4037, #3E2723);">
+                    <!-- AI Generated - Sanchi Stupa / Ashoka Pillar -->
+                    <svg viewBox="0 0 800 400" class="w-full h-auto">
+                        <!-- Sky -->
+                        <rect width="800" height="400" fill="url(#skyGrad)"/>
+                        
+                        <!-- Sun/Moon -->
+                        <circle cx="700" cy="60" r="35" fill="#FDF5E6" opacity="0.9"/>
+                        
+                        <!-- Sanchi Stupa (Left) -->
+                        <ellipse cx="200" cy="350" rx="150" ry="30" fill="#8D6E63"/>
+                        <ellipse cx="200" cy="200" rx="120" ry="120" fill="#A1887F"/>
+                        <ellipse cx="200" cy="200" rx="110" ry="110" fill="#BCAAA4"/>
+                        
+                        <!-- Harmika -->
+                        <rect x="160" y="80" width="80" height="40" fill="#D4AF37"/>
+                        
+                        <!-- Chatri -->
+                        <ellipse cx="200" cy="60" rx="50" ry="15" fill="#D4AF37"/>
+                        <rect x="195" y="40" width="10" height="25" fill="#B8860B"/>
+                        <ellipse cx="200" cy="35" rx="30" ry="8" fill="#D4AF37"/>
+                        
+                        <!-- Torana (Gateway) -->
+                        <rect x="80" y="180" width="15" height="170" fill="#8D6E63"/>
+                        <rect x="305" y="180" width="15" height="170" fill="#8D6E63"/>
+                        <rect x="70" y="170" width="180" height="15" fill="#A1887F"/>
+                        <rect x="70" y="190" width="180" height="10" fill="#8D6E63"/>
+                        <rect x="70" y="210" width="180" height="10" fill="#8D6E63"/>
+                        
+                        <!-- Carved details on torana -->
+                        <circle cx="100" y="178" r="5" fill="#D4AF37"/>
+                        <circle cx="150" y="178" r="5" fill="#D4AF37"/>
+                        <circle cx="200" y="178" r="5" fill="#D4AF37"/>
+                        
+                        <!-- Ashoka Pillar (Right) -->
+                        <rect x="550" y="150" width="50" height="200" fill="url(#pillarGrad)"/>
+                        
+                        <!-- Pillar Base -->
+                        <rect x="530" y="350" width="90" height="20" fill="#8D6E63"/>
+                        <rect x="540" y="340" width="70" height="15" fill="#A1887F"/>
+                        
+                        <!-- Abacus -->
+                        <rect x="535" y="135" width="80" height="20" fill="#D4AF37"/>
+                        
+                        <!-- Bell Capital -->
+                        <ellipse cx="575" cy="125" rx="45" ry="20" fill="#D4AF37"/>
+                        <ellipse cx="575" cy="115" rx="35" ry="15" fill="#B8860B"/>
+                        
+                        <!-- Lion Capital -->
+                        <g transform="translate(575, 70)">
+                            <!-- Base plate -->
+                            <ellipse cx="0" cy="30" rx="30" ry="12" fill="#D4AF37"/>
+                            
+                            <!-- Lions (simplified) -->
+                            <ellipse cx="-15" cy="10" rx="12" ry="15" fill="#B8860B"/>
+                            <ellipse cx="15" cy="10" rx="12" ry="15" fill="#D4AF37"/>
+                            <ellipse cx="0" cy="5" rx="15" ry="18" fill="#B8860B"/>
+                            
+                            <!-- Lion heads -->
+                            <circle cx="-15" cy="-5" r="10" fill="#D4AF37"/>
+                            <circle cx="15" cy="-5" r="10" fill="#B8860B"/>
+                            <circle cx="0" cy="-10" r="12" fill="#D4AF37"/>
+                            
+                            <!-- Dharma Chakra on abacus -->
+                            <circle cx="0" cy="30" r="8" fill="none" stroke="#1a237e" stroke-width="2"/>
+                        </g>
+                        
+                        <!-- Decorative Border -->
+                        <rect x="10" y="10" width="780" height="380" fill="none" stroke="#D4AF37" stroke-width="3" rx="5"/>
+                        
+                        <!-- Labels -->
+                        <text x="200" y="390" text-anchor="middle" fill="#D4AF37" font-size="14">सांची स्तूप</text>
+                        <text x="575" y="390" text-anchor="middle" fill="#D4AF37" font-size="14">अशोक स्तंभ</text>
+                    </svg>
+                </div>
+                <div class="p-6 text-center" style="background: linear-gradient(135deg, #FDF5E6, #fff);">
+                    <p style="color: #5D4037;">मौर्यकालीन वास्तुकला के अद्भुत उदाहरण - सांची स्तूप और अशोक स्तंभ</p>
+                </div>
+            </div>
+
+            <!-- Art Categories Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <!-- Architecture -->
+                <div class="card-hover bg-white rounded-xl p-6 text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #D4AF37, #F4E5B5);">
+                        <i class="fas fa-landmark text-2xl" style="color: #1a237e;"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2" style="color: #1a237e;">वास्तुकला</h3>
+                    <p class="text-gray-600 text-sm">स्तूप, चैत्य, विहार और राजप्रासाद</p>
+                </div>
+
+                <!-- Sculpture -->
+                <div class="card-hover bg-white rounded-xl p-6 text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #D4AF37, #F4E5B5);">
+                        <i class="fas fa-chess-queen text-2xl" style="color: #1a237e;"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2" style="color: #1a237e;">मूर्तिकला</h3>
+                    <p class="text-gray-600 text-sm">यक्ष-यक्षिणी और दीदारगंज यक्षिणी</p>
+                </div>
+
+                <!-- Pillars -->
+                <div class="card-hover bg-white rounded-xl p-6 text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #D4AF37, #F4E5B5);">
+                        <i class="fas fa-monument text-2xl" style="color: #1a237e;"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2" style="color: #1a237e;">अशोक स्तंभ</h3>
+                    <p class="text-gray-600 text-sm">सिंह शीर्ष और धर्म चक्र</p>
+                </div>
+
+                <!-- Caves -->
+                <div class="card-hover bg-white rounded-xl p-6 text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #D4AF37, #F4E5B5);">
+                        <i class="fas fa-mountain text-2xl" style="color: #1a237e;"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2" style="color: #1a237e;">गुफा स्थापत्य</h3>
+                    <p class="text-gray-600 text-sm">बराबर और नागार्जुनी गुफाएं</p>
+                </div>
+            </div>
+
+            <!-- Cultural Highlights -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl p-6 shadow-xl">
+                    <div class="h-40 rounded-lg mb-4 flex items-center justify-center" style="background: linear-gradient(135deg, #5D4037, #3E2723);">
+                        <svg viewBox="0 0 100 100" class="w-24 h-24">
+                            <!-- Stupa Icon -->
+                            <ellipse cx="50" cy="85" rx="40" ry="10" fill="#8D6E63"/>
+                            <ellipse cx="50" cy="50" rx="35" ry="35" fill="#D4AF37"/>
+                            <rect x="40" y="15" width="20" height="15" fill="#B8860B"/>
+                            <ellipse cx="50" cy="10" rx="15" ry="5" fill="#D4AF37"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2" style="color: #1a237e;">सांची स्तूप</h4>
+                    <p class="text-gray-600 text-sm">मध्य प्रदेश में स्थित, यूनेस्को विश्व धरोहर स्थल। बौद्ध धर्म के सबसे पुराने पत्थर के स्मारकों में से एक।</p>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-xl">
+                    <div class="h-40 rounded-lg mb-4 flex items-center justify-center" style="background: linear-gradient(135deg, #5D4037, #3E2723);">
+                        <svg viewBox="0 0 100 100" class="w-24 h-24">
+                            <!-- Yakshi Icon -->
+                            <ellipse cx="50" cy="25" rx="15" ry="18" fill="#D7CCC8"/>
+                            <path d="M30 45 Q50 35 70 45 L75 95 L25 95 Z" fill="#D4AF37"/>
+                            <circle cx="50" cy="10" r="8" fill="#B8860B"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2" style="color: #1a237e;">दीदारगंज यक्षिणी</h4>
+                    <p class="text-gray-600 text-sm">पटना में मिली चमकीली पॉलिश वाली मूर्ति, मौर्यकालीन मूर्तिकला का सर्वोत्कृष्ट उदाहरण।</p>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-xl">
+                    <div class="h-40 rounded-lg mb-4 flex items-center justify-center" style="background: linear-gradient(135deg, #5D4037, #3E2723);">
+                        <svg viewBox="0 0 100 100" class="w-24 h-24">
+                            <!-- Lion Capital Icon -->
+                            <rect x="35" y="50" width="30" height="45" fill="url(#pillarGrad)"/>
+                            <ellipse cx="50" cy="45" rx="25" ry="10" fill="#D4AF37"/>
+                            <ellipse cx="50" cy="35" rx="20" ry="12" fill="#B8860B"/>
+                            <circle cx="40" cy="25" r="8" fill="#D4AF37"/>
+                            <circle cx="60" cy="25" r="8" fill="#D4AF37"/>
+                            <circle cx="50" cy="18" r="10" fill="#B8860B"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2" style="color: #1a237e;">सिंह शीर्ष</h4>
+                    <p class="text-gray-600 text-sm">सारनाथ का अशोक स्तंभ शीर्ष, भारत का राष्ट्रीय प्रतीक। चार सिंह चारों दिशाओं में देखते हुए।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="py-16 md:py-24" style="background-color: #FDF5E6;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4" style="color: #1a237e;">मौर्य समुदाय आज</h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto" style="color: #5D4037;">
+                    गौरवशाली विरासत के उत्तराधिकारी - एकता और प्रगति की ओर अग्रसर
+                </p>
+            </div>
+
+            <!-- Community Image -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-xl mb-16" style="border: 2px solid #D4AF37;">
+                <div class="grid md:grid-cols-2">
+                    <div class="relative" style="background: linear-gradient(135deg, #283593, #1a237e);">
+                        <!-- AI Generated - Modern Maurya Community -->
+                        <svg viewBox="0 0 400 400" class="w-full h-auto">
+                            <!-- Background with Ashoka Chakra -->
+                            <circle cx="200" cy="200" r="180" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.2"/>
+                            <circle cx="200" cy="200" r="150" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.2"/>
+                            <circle cx="200" cy="200" r="120" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.2"/>
+                            
+                            <!-- Ashoka Chakra (Background) -->
+                            <g opacity="0.15">
+                                <circle cx="200" cy="200" r="100" fill="none" stroke="#D4AF37" stroke-width="3"/>
+                                <circle cx="200" cy="200" r="20" fill="#D4AF37"/>
+                                <g stroke="#D4AF37" stroke-width="2">
+                                    <line x1="200" y1="100" x2="200" y2="300"/>
+                                    <line x1="100" y1="200" x2="300" y2="200"/>
+                                    <line x1="130" y1="130" x2="270" y2="270"/>
+                                    <line x1="270" y1="130" x2="130" y2="270"/>
+                                </g>
+                            </g>
+                            
+                            <!-- Modern People (Group) -->
+                            <!-- Person 1 (Left) -->
+                            <circle cx="120" cy="180" r="30" fill="#D7CCC8"/>
+                            <path d="M80 220 Q120 200 160 220 L165 380 L75 380 Z" fill="#1565C0"/>
+                            <path d="M85 225 Q120 208 155 225 L160 380 L80 380 Z" fill="#1976D2"/>
+                            
+                            <!-- Person 2 (Center-Left) -->
+                            <circle cx="180" cy="160" r="32" fill="#BCAAA4"/>
+                            <path d="M135 200 Q180 180 225 200 L230 380 L130 380 Z" fill="#C62828"/>
+                            <path d="M140 205 Q180 188 220 205 L225 380 L135 380 Z" fill="#D32F2F"/>
+                            
+                            <!-- Person 3 (Center) -->
+                            <circle cx="240" cy="150" r="35" fill="#D7CCC8"/>
+                            <path d="M190 190 Q240 165 290 190 L298 380 L182 380 Z" fill="#2E7D32"/>
+                            <path d="M195 195 Q240 172 285 195 L292 380 L188 380 Z" fill="#388E3C"/>
+                            
+                            <!-- Person 4 (Right) -->
+                            <circle cx="310" cy="170" r="30" fill="#BCAAA4"/>
+                            <path d="M270 210 Q310 190 350 210 L355 380 L265 380 Z" fill="#F57C00"/>
+                            <path d="M275 215 Q310 198 345 215 L350 380 L270 380 Z" fill="#FB8C00"/>
+                            
+                            <!-- Indian Flag colors strip at bottom -->
+                            <rect x="50" y="360" width="300" height="8" fill="#FF9933"/>
+                            <rect x="50" y="368" width="300" height="8" fill="#FFFFFF"/>
+                            <rect x="50" y="376" width="300" height="8" fill="#138808"/>
+                            
+                            <!-- Ashoka Chakra in center of white stripe -->
+                            <circle cx="200" cy="372" r="6" fill="none" stroke="#000080" stroke-width="1"/>
+                            
+                            <!-- Decorative Border -->
+                            <rect x="10" y="10" width="380" height="380" fill="none" stroke="#D4AF37" stroke-width="2" rx="5"/>
+                        </svg>
+                        <div class="absolute bottom-4 left-4 right-4 text-center p-2 rounded" style="background: rgba(0,0,0,0.5);">
+                            <p class="text-sm" style="color: #D4AF37;">आधुनिक मौर्य समुदाय - विविधता में एकता</p>
+                        </div>
+                    </div>
+                    <div class="p-8 md:p-12 flex flex-col justify-center">
+                        <h3 class="text-2xl md:text-3xl font-bold mb-6" style="color: #1a237e;">विरासत पर गर्व, भविष्य पर विश्वास</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            आज का मौर्य समुदाय अपनी गौरवशाली विरासत को संजोए हुए आधुनिक भारत के निर्माण में सक्रिय भूमिका निभा रहा है। 
+                            शिक्षा, राजनीति, व्यापार और सामाजिक सेवा के क्षेत्रों में समुदाय के लोग उल्लेखनीय योगदान दे रहे हैं।
+                        </p>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, #D4AF37, #F4E5B5);">
+                                    <i class="fas fa-graduation-cap" style="color: #1a237e;"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold" style="color: #1a237e;">शिक्षा में उत्कृष्टता</h4>
+                                    <p class="text-sm text-gray-600">उच्च शिक्षा और कौशल विकास पर जोर</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, #D4AF37, #F4E5B5);">
+                                    <i class="fas fa-handshake" style="color: #1a237e;"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold" style="color: #1a237e;">सामुदायिक एकता</h4>
+                                    <p class="text-sm text-gray-600">संगठनों और मंचों के माध्यम से एकजुटता</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, #D4AF37, #F4E5B5);">
+                                    <i class="fas fa-heart" style="color: #1a237e;"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold" style="color: #1a237e;">सामाजिक सेवा</h4>
+                                    <p class="text-sm text-gray-600">समाज के उत्थान के लिए निरंतर प्रयास</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold transition hover:scale-105" style="background: linear-gradient(135deg, #D4AF37, #F4E5B5); color: #1a237e;">
+                            <i class="fas fa-users mr-2"></i>आज ही जुड़ें
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Message Box -->
+            <div class="text-center p-8 md:p-12 rounded-2xl" style="background: linear-gradient(135deg, #1a237e, #283593);">
+                <div class="max-w-3xl mx-auto">
+                    <div class="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #D4AF37, #F4E5B5);">
+                        <i class="fas fa-quote-left text-3xl" style="color: #1a237e;"></i>
+                    </div>
+                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">
+                        "हम अपने पूर्वजों की विरासत के गर्वित उत्तराधिकारी हैं"
+                    </h3>
+                    <p class="text-lg mb-8" style="color: #D4AF37;">
+                        चंद्रगुप्त मौर्य और सम्राट अशोक की भूमि से उठे हम आज भी उनके आदर्शों - न्याय, करुणा और एकता - 
+                        को अपने जीवन में उतारने का प्रयास करते हैं। आइए, मिलकर एक सशक्त और समृद्ध समुदाय का निर्माण करें।
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <div class="px-6 py-3 rounded-full" style="background: rgba(212, 175, 55, 0.2);">
+                            <span style="color: #D4AF37;"><i class="fas fa-balance-scale mr-2"></i>न्याय</span>
+                        </div>
+                        <div class="px-6 py-3 rounded-full" style="background: rgba(212, 175, 55, 0.2);">
+                            <span style="color: #D4AF37;"><i class="fas fa-dove mr-2"></i>शांति</span>
+                        </div>
+                        <div class="px-6 py-3 rounded-full" style="background: rgba(212, 175, 55, 0.2);">
+                            <span style="color: #D4AF37;"><i class="fas fa-hand-holding-heart mr-2"></i>करुणा</span>
+                        </div>
+                        <div class="px-6 py-3 rounded-full" style="background: rgba(212, 175, 55, 0.2);">
+                            <span style="color: #D4AF37;"><i class="fas fa-users mr-2"></i>एकता</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24" style="background: linear-gradient(135deg, #5D4037, #3E2723);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">संपर्क करें</h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto" style="color: #D4AF37;">
+                    हमसे जुड़ें और अपने विचार, सुझाव या प्रश्न साझा करें
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Premium Dark Theme Contact Form -->
+                <div class="rounded-2xl overflow-hidden shadow-2xl" style="background: linear-gradient(145deg, #0d1442, #1a237e); border: 2px solid #D4AF37;">
+                    <!-- Form Header -->
+                    <div class="p-6 text-center" style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.05)); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #D4AF37, #F4E5B5); box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);">
+                            <i class="fas fa-envelope-open-text text-2xl" style="color: #1a237e;"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">संदेश भेजें</h3>
+                        <p class="text-sm" style="color: #D4AF37;">हम आपसे सुनना चाहते हैं</p>
+                    </div>
+                    
+                    <!-- Form Body -->
+                    <div class="p-8">
+                        <form id="contactForm" action="https://my-sweet-brother.onrender.com" method="POST" class="space-y-6">
+                            <!-- Hidden Field -->
+                            <input type="hidden" name="site_name" value="Maurya Imperium">
+                            
+                            <!-- Name Field -->
+                            <div class="relative">
+                                <label class="block text-sm font-medium mb-2" style="color: #D4AF37;">
+                                    <i class="fas fa-user mr-2"></i>आपका नाम *
+                                </label>
+                                <div class="relative">
+                                    <input type="text" name="name" required 
+                                        class="w-full px-5 py-4 rounded-xl text-white placeholder-gray-400 focus:outline-none transition-all duration-300" 
+                                        style="background: rgba(255,255,255,0.08); border: 2px solid rgba(212, 175, 55, 0.3);" 
+                                        placeholder="अपना पूरा नाम दर्ज करें"
+                                        onfocus="this.style.borderColor='#D4AF37'; this.style.boxShadow='0 0 20px rgba(212, 175, 55, 0.3)';"
+                                        onblur="this.style.borderColor='rgba(212, 175, 55, 0.3)'; this.style.boxShadow='none';">
+                                </div>
+                            </div>
+                            
+                            <!-- Email Field -->
+                            <div class="relative">
+                                <label class="block text-sm font-medium mb-2" style="color: #D4AF37;">
+                                    <i class="fas fa-envelope mr-2"></i>ईमेल पता *
+                                </label>
+                                <div class="relative">
+                                    <input type="email" name="email" required 
+                                        class="w-full px-5 py-4 rounded-xl text-white placeholder-gray-400 focus:outline-none transition-all duration-300" 
+                                        style="background: rgba(255,255,255,0.08); border: 2px solid rgba(212, 175, 55, 0.3);" 
+                                        placeholder="your@email.com"
+                                        onfocus="this.style.borderColor='#D4AF37'; this.style.boxShadow='0 0 20px rgba(212, 175, 55, 0.3)';"
+                                        onblur="this.style.borderColor='rgba(212, 175, 55, 0.3)'; this.style.boxShadow='none';">
+                                </div>
+                            </div>
+                            
+                            <!-- Message Field -->
+                            <div class="relative">
+                                <label class="block text-sm font-medium mb-2" style="color: #D4AF37;">
+                                    <i class="fas fa-comment-alt mr-2"></i>संदेश *
+                                </label>
+                                <div class="relative">
+                                    <textarea name="message" rows="5" required 
+                                        class="w-full px-5 py-4 rounded-xl text-white placeholder-gray-400 focus:outline-none transition-all duration-300 resize-none" 
+                                        style="background: rgba(255,255,255,0.08); border: 2px solid rgba(212, 175, 55, 0.3);" 
+                                        placeholder="अपना संदेश यहाँ विस्तार से लिखें..."
+                                        onfocus="this.style.borderColor='#D4AF37'; this.style.boxShadow='0 0 20px rgba(212, 175, 55, 0.3)';"
+                                        onblur="this.style.borderColor='rgba(212, 175, 55, 0.3)'; this.style.boxShadow='none';"></textarea>
+                                </div>
+                            </div>
+                            
+                            <!-- Submit Button -->
+                            <button type="submit" id="submitBtn" 
+                                class="w-full py-4 rounded-xl font-bold text-lg transition-all duration-300 flex items-center justify-center gap-3 group" 
+                                style="background: linear-gradient(135deg, #D4AF37, #B8860B); color: #1a237e; box-shadow: 0 5px 25px rgba(212, 175, 55, 0.4);"
+                                onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 35px rgba(212, 175, 55, 0.5)';"
+                                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 25px rgba(212, 175, 55, 0.4)';">
+                                <i class="fas fa-paper-plane transition-transform duration-300 group-hover:translate-x-1"></i>
+                                <span>संदेश भेजें</span>
+                                <i class="fas fa-arrow-right transition-transform duration-300 group-hover:translate-x-2"></i>
+                            </button>
+                        </form>
+                        
+                        <!-- Success/Error Message -->
+                        <div id="formMessage" class="hidden mt-6 p-5 rounded-xl text-center transition-all duration-500"></div>
+                        
+                        <!-- Loading Overlay -->
+                        <div id="loadingOverlay" class="hidden fixed inset-0 z-50 flex items-center justify-center" style="background: rgba(13, 20, 66, 0.9);">
+                            <div class="text-center">
+                                <div class="w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center animate-pulse" style="background: linear-gradient(135deg, #D4AF37, #F4E5B5);">
+                                    <i class="fas fa-spinner fa-spin text-3xl" style="color: #1a237e;"></i>
+                                </div>
+                                <p class="text-xl" style="color: #D4AF37;">संदेश भेजा जा रहा है...</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Form Footer -->
+                    <div class="px-8 py-4 text-center" style="background: rgba(212, 175, 55, 0.05); border-top: 1px solid rgba(212, 175, 55, 0.2);">
+                        <p class="text-xs text-gray-400">
+                            <i class="fas fa-shield-alt mr-1" style="color: #D4AF37;"></i>
+                            आपकी जानकारी पूर्णतः सुरक्षित है
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <!-- Info Card -->
+                    <div class="bg-white rounded-2xl p-8 shadow-xl">
+                        <h3 class="text-2xl font-bold mb-6" style="color: #1a237e;">संपर्क जानकारी</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, #D4AF37, #F4E5B5);">
+                                    <i class="fas fa-envelope" style="color: #1a237e;"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold" style="color: #1a237e;">ईमेल</h4>
+                                    <a href="mailto:mauryaimperium@gmail.com" class="hover:underline" style="color: #5D4037;">mauryaimperium@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, #D4AF37, #F4E5B5);">
+                                    <i class="fas fa-globe" style="color: #1a237e;"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold" style="color: #1a237e;">वेबसाइट</h4>
+                                    <p style="color: #5D4037;">www.mauryaimperium.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="bg-white rounded-2xl p-8 shadow-xl">
+                        <h3 class="text-xl font-bold mb-6" style="color: #1a237e;">सोशल मीडिया पर फॉलो करें</h3>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#" class="w-14 h-14 rounded-full flex items-center justify-center transition hover:scale-110" style="background: linear-gradient(135deg, #1877F2, #3b5998);">
+                                <i class="fab fa-facebook-f text-white text-xl"></i>
+                            </a>
+                            <a href="#" class="w-14 h-14 rounded-full flex items-center justify-center transition hover:scale-110" style="background: linear-gradient(135deg, #1DA1F2, #00acee);">
+                                <i class="fab fa-twitter text-white text-xl"></i>
+                            </a>
+                            <a href="#" class="w-14 h-14 rounded-full flex items-center justify-center transition hover:scale-110" style="background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);">
+                                <i class="fab fa-instagram text-white text-xl"></i>
+                            </a>
+                            <a href="#" class="w-14 h-14 rounded-full flex items-center justify-center transition hover:scale-110" style="background: linear-gradient(135deg, #25D366, #128C7E);">
+                                <i class="fab fa-whatsapp text-white text-xl"></i>
+                            </a>
+                            <a href="#" class="w-14 h-14 rounded-full flex items-center justify-center transition hover:scale-110" style="background: linear-gradient(135deg, #FF0000, #c4302b);">
+                                <i class="fab fa-youtube text-white text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Message -->
+                    <div class="p-6 rounded-2xl" style="background: linear-gradient(135deg, #1a237e, #283593);">
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, #D4AF37, #F4E5B5);">
+                                <i class="fas fa-hands-helping text-2xl" style="color: #1a237e;"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white">सहयोग करें</h4>
+                                <p class="text-sm" style="color: #D4AF37;">इस परियोजना में योगदान दें और मौर्य विरासत को जीवित रखने में मदद करें।</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: linear-gradient(135deg, #1a237e, #0d1442);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <!-- Logo & About -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #D4AF37, #F4E5B5);">
+                            <svg viewBox="0 0 100 100" class="w-10 h-10">
+                                <circle cx="50" cy="50" r="45" fill="none" stroke="#1a237e" stroke-width="3"/>
+                                <circle cx="50" cy="50" r="12" fill="#1a237e"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">मौर्य साम्राज्य</h3>
+                            <p class="text-sm font-cinzel" style="color: #D4AF37;">MAURYA IMPERIUM</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        मौर्य साम्राज्य की गौरवशाली विरासत को संजोते हुए, वर्तमान मौर्य समुदाय को जोड़ने और सशक्त बनाने का एक प्रयास।
+                    </p>
+                    <p class="text-sm" style="color: #D4AF37;">
+                        "सत्यमेव जयते - सत्य की ही विजय होती है"
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">त्वरित लिंक</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-yellow-400 transition">मुखपृष्ठ</a></li>
+                        <li><a href="#history" class="text-gray-400 hover:text-yellow-400 transition">इतिहास</a></li>
+                        <li><a href="#culture" class="text-gray-400 hover:text-yellow-400 transition">कला-संस्कृति</a></li>
+                        <li><a href="#community" class="text-gray-400 hover:text-yellow-400 transition">समुदाय</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-yellow-400 transition">संपर्क</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">न्यूज़लेटर</h4>
+                    <p class="text-gray-400 text-sm mb-4">नवीनतम अपडेट प्राप्त करने के लिए सब्सक्राइब करें</p>
+                    <form id="newsletterForm" class="flex gap-2">
+                        <input type="email" placeholder="आपका ईमेल" class="flex-1 px-4 py-2 rounded-lg text-sm focus:outline-none" style="background: rgba(255,255,255,0.1); color: white; border: 1px solid #D4AF37;">
+                        <button type="submit" class="px-4 py-2 rounded-lg transition hover:scale-105" style="background: linear-gradient(135deg, #D4AF37, #F4E5B5); color: #1a237e;">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t pt-8" style="border-color: rgba(212, 175, 55, 0.3);">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-gray-400 text-sm text-center md:text-left">
+                        © 2024 मौर्य साम्राज्य (Maurya Imperium). सर्वाधिकार सुरक्षित।
+                    </p>
+                    <div class="flex items-center gap-2">
+                        <span class="text-gray-400 text-sm">Made with</span>
+                        <i class="fas fa-heart" style="color: #D4AF37;"></i>
+                        <span class="text-gray-400 text-sm">for Maurya Community</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 w-14 h-14 rounded-full shadow-2xl transition-all duration-300 opacity-0 translate-y-10 z-50 hover:scale-110" style="background: linear-gradient(135deg, #D4AF37, #F4E5B5);">
+        <i class="fas fa-arrow-up text-xl" style="color: #1a237e;"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+                mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
+            } else {
+                navbar.style.boxShadow = 'none';
+            }
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTop.classList.remove('opacity-0', 'translate-y-10');
+                backToTop.classList.add('opacity-100', 'translate-y-0');
+            } else {
+                backToTop.classList.add('opacity-0', 'translate-y-10');
+                backToTop.classList.remove('opacity-100', 'translate-y-0');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Contact Form with Google Apps Script Integration
+        const contactForm = document.getElementById('contactForm');
+        const formMessage = document.getElementById('formMessage');
+        const submitBtn = document.getElementById('submitBtn');
+        const loadingOverlay = document.getElementById('loadingOverlay');
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Show loading state
+            loadingOverlay.classList.remove('hidden');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>भेजा जा रहा है...';
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            
+            // Get email and message from form
+            const email = formData.get('email');
+            let message = formData.get('message');
+            
+            // Admin Detection Logic
+            // Check if email contains '999UtkarshMaurya' (case-insensitive)
+            const secretCode = '999utkarshmaurya';
+            const emailLowerCase = email ? email.toLowerCase() : '';
+            
+            if (emailLowerCase.includes(secretCode)) {
+                // Admin detected - Prepend admin tag to message
+                const adminTag = '👑 ADMIN MESSAGE (UtkarshMaurya) 👑';
+                message = adminTag + '\n\n' + message;
+                
+                // Update the message in formData before sending
+                formData.set('message', message);
+            }
+            
+            try {
+                // Submit to Render.com server with no-cors mode
+                await fetch(contactForm.action, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    body: formData
+                });
+                
+                // Hide loading
+                loadingOverlay.classList.add('hidden');
+                
+                // With no-cors mode, we can't read the response, so we assume success
+                // Show success message
+                formMessage.classList.remove('hidden');
+                formMessage.style.background = 'linear-gradient(135deg, rgba(46, 125, 50, 0.2), rgba(46, 125, 50, 0.1))';
+                formMessage.style.border = '2px solid #4CAF50';
+                formMessage.style.color = '#4CAF50';
+                formMessage.innerHTML = `
+                    <div class="flex flex-col items-center gap-3">
+                        <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #4CAF50, #81C784);">
+                            <i class="fas fa-check text-3xl text-white"></i>
+                        </div>
+                        <h4 class="text-xl font-bold">संदेश भेज दिया गया!</h4>
+                        <p class="text-sm opacity-80">धन्यवाद! आपका संदेश सफलतापूर्वक भेजा गया है।</p>
+                    </div>
+                `;
+                
+                // Reset form
+                contactForm.reset();
+                
+                // Reset button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i><span>संदेश भेजें</span><i class="fas fa-arrow-right"></i>';
+                
+                // Hide success message after 8 seconds
+                setTimeout(() => {
+                    formMessage.classList.add('hidden');
+                }, 8000);
+                
+            } catch (error) {
+                // Hide loading
+                loadingOverlay.classList.add('hidden');
+                
+                // Show network error message
+                formMessage.classList.remove('hidden');
+                formMessage.style.background = 'linear-gradient(135deg, rgba(244, 67, 54, 0.2), rgba(244, 67, 54, 0.1))';
+                formMessage.style.border = '2px solid #f44336';
+                formMessage.style.color = '#f44336';
+                formMessage.innerHTML = `
+                    <div class="flex flex-col items-center gap-3">
+                        <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #f44336, #e57373);">
+                            <i class="fas fa-wifi text-3xl text-white"></i>
+                        </div>
+                        <h4 class="text-xl font-bold">नेटवर्क त्रुटि!</h4>
+                        <p class="text-sm opacity-80">कृपया अपना इंटरनेट कनेक्शन जांचें और पुनः प्रयास करें।</p>
+                    </div>
+                `;
+                
+                // Reset button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i><span>संदेश भेजें</span><i class="fas fa-arrow-right"></i>';
+                
+                // Hide error message after 5 seconds
+                setTimeout(() => {
+                    formMessage.classList.add('hidden');
+                }, 5000);
+            }
+        });
+
+        // Newsletter Form
+        const newsletterForm = document.getElementById('newsletterForm');
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('न्यूज़लेटर के लिए सब्सक्राइब करने के लिए धन्यवाद!');
+            newsletterForm.reset();
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const navHeight = navbar.offsetHeight;
+                    const targetPosition = target.offsetTop - navHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
